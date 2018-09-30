@@ -23,7 +23,6 @@
 	</properties>
 	
 	<dependencies>
-		
 		<!-- 核心模块，包括自动配置支持、日志和YAML； -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -63,12 +62,25 @@
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
+		<!-- 对JDBC的支持 -->
+		<dependency>
+		  <groupId>org.springframework.boot</groupId>
+		  <artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency> 
+		<!-- 添加对mysql依赖 -->
+		<dependency>
+		  <groupId>mysql</groupId>
+		  <artifactId>mysql-connector-java</artifactId>
+		  </dependency>
+		<dependency>
+		  <groupId>com.alibaba</groupId>
+		  <artifactId>druid</artifactId>
+		  <version>1.0.14</version>
+		</dependency>
 	</dependencies>
-
 	<build>
 		<!-- 打成jar包的名称 -->
-  		<finalName>SpringBootDemo</finalName>
-		
+  		<finalName>SpringBootDemo</finalName>	
 		<plugins>
 			<plugin>
 				<!-- 进行打包时，会打包成一个可以直接运行的 JAR 文件，
